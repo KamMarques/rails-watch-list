@@ -2,19 +2,14 @@
 <h1><%= @list.name %></h1>
 
 <ul>
-  <%= @list.movies.each do |movie| %>
-    <li><%= movie.title %></li>
-    <li><%= movie.overview %></li>
-    <li><%= movie.poster_url %></li>
-    <li><% end %></li>
-</ul>
-
-<h2>my movies</h2>
-  <ul>
-     <% @bookmarks.each do |bookmark|%>
-     <li><%= link_to %></li>
-     <% end %>
+  <% @list.movies.each do |movie| %>
+    <li><%= movie.title %>
+      <%= movie.overview %>
+      <%= image_tag movie.poster_url, width: 200 %>
+      <% end %></li>
 </ul>
 
 
+
+<%= link_to "new", new_list_bookmark_path(@list)%>
 <%= link_to "back", lists_path  %>
