@@ -1,0 +1,20 @@
+<br>
+<h1><%= @list.name %></h1>
+
+<ul>
+  <%= @list.movies.each do |movie| %>
+    <li><%= movie.title %></li>
+    <li><%= movie.overview %></li>
+    <li><%= movie.poster_url %></li>
+    <li><% end %></li>
+</ul>
+
+<h2>my movies</h2>
+  <ul>
+     <% @bookmarks.each do |bookmark|%>
+     <li><%= link_to %></li>
+     <% end %>
+</ul>
+
+
+<%= link_to "back", lists_path  %>
